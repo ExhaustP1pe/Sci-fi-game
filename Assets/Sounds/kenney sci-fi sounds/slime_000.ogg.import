@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://rtt63q5lofmb"
+path="res://.godot/imported/slime_000.ogg-51f81f4ed0b55f9554b9ad02718a2b9b.oggvorbisstr"
+
+[deps]
+
+source_file="res://Assets/Sounds/kenney sci-fi sounds/slime_000.ogg"
+dest_files=["res://.godot/imported/slime_000.ogg-51f81f4ed0b55f9554b9ad02718a2b9b.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

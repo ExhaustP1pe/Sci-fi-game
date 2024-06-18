@@ -1,0 +1,43 @@
+[gd_scene load_steps=7 format=3 uid="uid://du6y0jdm8xkgg"]
+
+[ext_resource type="Material" uid="uid://bx6qeabdhq2s" path="res://Assets/Textures/kenney_prototype_tools/materials/dark/material_01.tres" id="1_m475u"]
+[ext_resource type="Script" path="res://addons/dynamic_day_night_cycles/custom_eot.gd" id="1_t1vay"]
+[ext_resource type="Material" uid="uid://b7kc8jfs4fowj" path="res://Assets/Textures/kenney_prototype_tools/materials/green/material_02.tres" id="2_cagn7"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_vopxw"]
+sky_top_color = Color(0.388235, 0.509804, 0.701961, 1)
+sky_horizon_color = Color(0.668628, 0.683333, 0.72451, 1)
+ground_bottom_color = Color(0.286275, 0.223529, 0.196078, 1)
+ground_horizon_color = Color(0.668628, 0.683333, 0.72451, 1)
+
+[sub_resource type="Sky" id="Sky_68hok"]
+sky_material = SubResource("ProceduralSkyMaterial_vopxw")
+
+[sub_resource type="Environment" id="Environment_ewug7"]
+background_mode = 2
+sky = SubResource("Sky_68hok")
+
+[node name="Test" type="Node3D"]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_ewug7")
+
+[node name="CustomEOT" type="Node" parent="WorldEnvironment"]
+script = ExtResource("1_t1vay")
+day_duration = 900.0
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(-0.866025, -0.433013, 0.25, 0, 0.5, 0.866025, -0.5, 0.75, -0.433013, 0, 13.1132, 0)
+shadow_enabled = true
+
+[node name="map" type="Node3D" parent="DirectionalLight3D"]
+
+[node name="CSGBox3D" type="CSGBox3D" parent="DirectionalLight3D/map"]
+transform = Transform3D(-0.866025, -1.49012e-08, -0.5, -0.433013, 0.5, 0.75, 0.25, 0.866025, -0.433013, 1.99164e-07, -6.68284, -11.575)
+size = Vector3(50, 0.5, 50)
+material = ExtResource("1_m475u")
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="DirectionalLight3D/map"]
+transform = Transform3D(-0.866025, -1.49012e-08, -0.5, -0.433013, 0.5, 0.75, 0.25, 0.866025, -0.433013, -15.3483, -9.25195, -8.53323)
+size = Vector3(6.36841, 2.18619, 0.329102)
+material = ExtResource("2_cagn7")

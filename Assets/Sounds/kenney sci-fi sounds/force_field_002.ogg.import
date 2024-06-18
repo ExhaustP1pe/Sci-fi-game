@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://d3fwrb85w1rcc"
+path="res://.godot/imported/force_field_002.ogg-3265d6615e7e1f8673e24e8c4b931b53.oggvorbisstr"
+
+[deps]
+
+source_file="res://Assets/Sounds/kenney sci-fi sounds/force_field_002.ogg"
+dest_files=["res://.godot/imported/force_field_002.ogg-3265d6615e7e1f8673e24e8c4b931b53.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

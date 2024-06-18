@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://ccujdubtv2uoy"
+path="res://.godot/imported/impact_wood_light_002.ogg-2b9af04f984d0a86c1710cd8e905c6e9.oggvorbisstr"
+
+[deps]
+
+source_file="res://Assets/Sounds/kenney impact sounds/impact_wood_light_002.ogg"
+dest_files=["res://.godot/imported/impact_wood_light_002.ogg-2b9af04f984d0a86c1710cd8e905c6e9.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

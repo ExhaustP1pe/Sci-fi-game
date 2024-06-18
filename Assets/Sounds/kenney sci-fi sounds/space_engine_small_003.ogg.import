@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://cu7eyl7gj0gy6"
+path="res://.godot/imported/space_engine_small_003.ogg-7ec2aef5e517b9d7be79fa4f057bcd85.oggvorbisstr"
+
+[deps]
+
+source_file="res://Assets/Sounds/kenney sci-fi sounds/space_engine_small_003.ogg"
+dest_files=["res://.godot/imported/space_engine_small_003.ogg-7ec2aef5e517b9d7be79fa4f057bcd85.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

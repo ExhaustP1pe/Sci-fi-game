@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://0tgdy2x2675r"
+path="res://.godot/imported/impact_plate_heavy_003.ogg-31b61e19a2c90424b6bc607d520bc9ae.oggvorbisstr"
+
+[deps]
+
+source_file="res://Assets/Sounds/kenney impact sounds/impact_plate_heavy_003.ogg"
+dest_files=["res://.godot/imported/impact_plate_heavy_003.ogg-31b61e19a2c90424b6bc607d520bc9ae.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
