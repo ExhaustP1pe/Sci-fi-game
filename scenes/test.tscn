@@ -1,8 +1,17 @@
-[gd_scene load_steps=7 format=3 uid="uid://du6y0jdm8xkgg"]
+[gd_scene load_steps=24 format=3 uid="uid://du6y0jdm8xkgg"]
 
 [ext_resource type="Material" uid="uid://bx6qeabdhq2s" path="res://Assets/Textures/kenney_prototype_tools/materials/dark/material_01.tres" id="1_m475u"]
-[ext_resource type="Script" path="res://addons/dynamic_day_night_cycles/custom_eot.gd" id="1_t1vay"]
 [ext_resource type="Material" uid="uid://b7kc8jfs4fowj" path="res://Assets/Textures/kenney_prototype_tools/materials/green/material_02.tres" id="2_cagn7"]
+[ext_resource type="Material" uid="uid://i6ttymvfh5li" path="res://Assets/Textures/kenney_prototype_tools/materials/green/material_09.tres" id="3_4oo0p"]
+[ext_resource type="Script" path="res://addons/Stairs3D/stairs_3d.gd" id="4_1mejf"]
+[ext_resource type="PackedScene" uid="uid://cr2ersq7g6q6f" path="res://player.tscn" id="4_fgdv0"]
+[ext_resource type="Material" uid="uid://c4m3pqbl84uhl" path="res://Assets/Textures/kenney_prototype_tools/materials/purple/material_02.tres" id="4_r0bfr"]
+[ext_resource type="Material" uid="uid://bhvnpiqj75ju8" path="res://Assets/Textures/kenney_prototype_tools/materials/green/material_12.tres" id="5_lb5nh"]
+[ext_resource type="Material" uid="uid://s6f63ep6y607" path="res://Assets/Textures/kenney_prototype_tools/materials/orange/material_12.tres" id="6_wj3i4"]
+[ext_resource type="Material" uid="uid://d0gmvf62uyhd0" path="res://Assets/Textures/kenney_prototype_tools/materials/red/material_01.tres" id="7_4a7h4"]
+[ext_resource type="Material" uid="uid://cimqcwahb0vnh" path="res://Assets/Textures/kenney_prototype_tools/materials/purple/material_05.tres" id="8_j7h7n"]
+[ext_resource type="Material" uid="uid://oob6p5w3hsl5" path="res://Assets/Textures/kenney_prototype_tools/materials/red/material_09.tres" id="9_sfgt7"]
+[ext_resource type="Material" uid="uid://dxlnifhgft6h5" path="res://Assets/Textures/kenney_prototype_tools/materials/green/material_01.tres" id="10_ejp5m"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_vopxw"]
 sky_top_color = Color(0.388235, 0.509804, 0.701961, 1)
@@ -17,14 +26,55 @@ sky_material = SubResource("ProceduralSkyMaterial_vopxw")
 background_mode = 2
 sky = SubResource("Sky_68hok")
 
+[sub_resource type="PrismMesh" id="PrismMesh_hphak"]
+left_to_right = 1.0
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_b2w2b"]
+bounce = 1.0
+
+[sub_resource type="BoxMesh" id="BoxMesh_5r0sl"]
+lightmap_size_hint = Vector2i(24, 21)
+material = ExtResource("4_r0bfr")
+size = Vector3(2, 0.5, 2)
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_k3i3n"]
+points = PackedVector3Array(-1, -0.25, -1, -1, 0.25, -1, 1, -0.25, -1, -1, -0.25, 1, -1, 0.25, 1, 1, 0.25, -1, 1, -0.25, 1, 1, 0.25, 1)
+
+[sub_resource type="Animation" id="Animation_jy8d6"]
+resource_name = "moving plat"
+length = 6.0
+loop_mode = 2
+tracks/0/type = "position_3d"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = PackedFloat32Array(0, 1, -19.5921, -8.13351, -2.37573, 6, 1, -24.3603, -0.981247, -6.50509)
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_imgeu"]
+_data = {
+"moving plat": SubResource("Animation_jy8d6")
+}
+
+[sub_resource type="Curve3D" id="Curve3D_1axa8"]
+_data = {
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -0.0109487, -9.33146e-07, -2.60561),
+"tilts": PackedFloat32Array(0, 0)
+}
+point_count = 2
+
+[sub_resource type="Curve3D" id="Curve3D_b74bb"]
+_data = {
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -1, 0, 0, 0, 0, 0, 0, 0.0604649, 0, -3.03492, 0, 0, 0, 0, 0, 0, 0.446857, 0, -4.62507, 0, 0, 0, 0, 0, 0, 1.44256, 0, -5.4573, 0, 0, 0, 0, 0, 0, 2.55715, 0, -5.918, 0, 0, 0, 0, 0, 0, 3.28535, 0, -5.99231, 0, 0, 0, 0, 0, 0, 4.29592, 0, -5.88828, 0, 0, 0, 0, 0, 0, 4.84578, 0, -5.87342, 0, 0, 0, 0, 0, 0, 5.18759, 0, -5.90314, 0, 0, 0, 0, 0, 0, 5.32134, 0, -5.90314),
+"tilts": PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)
+}
+point_count = 11
+
 [node name="Test" type="Node3D"]
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_ewug7")
-
-[node name="CustomEOT" type="Node" parent="WorldEnvironment"]
-script = ExtResource("1_t1vay")
-day_duration = 900.0
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(-0.866025, -0.433013, 0.25, 0, 0.5, 0.866025, -0.5, 0.75, -0.433013, 0, 13.1132, 0)
@@ -33,11 +83,68 @@ shadow_enabled = true
 [node name="map" type="Node3D" parent="DirectionalLight3D"]
 
 [node name="CSGBox3D" type="CSGBox3D" parent="DirectionalLight3D/map"]
-transform = Transform3D(-0.866025, -1.49012e-08, -0.5, -0.433013, 0.5, 0.75, 0.25, 0.866025, -0.433013, 1.99164e-07, -6.68284, -11.575)
+transform = Transform3D(-0.866025, -2.28867e-08, -0.5, -0.433013, 0.5, 0.75, 0.25, 0.866025, -0.433013, -1.01042e-07, -6.68284, -11.575)
+use_collision = true
 size = Vector3(50, 0.5, 50)
 material = ExtResource("1_m475u")
 
 [node name="CSGBox3D2" type="CSGBox3D" parent="DirectionalLight3D/map"]
-transform = Transform3D(-0.866025, -1.49012e-08, -0.5, -0.433013, 0.5, 0.75, 0.25, 0.866025, -0.433013, -15.3483, -9.25195, -8.53323)
-size = Vector3(6.36841, 2.18619, 0.329102)
+transform = Transform3D(-0.866025, 2.18168e-08, -0.5, -0.433013, 0.5, 0.75, 0.25, 0.866025, -0.433013, -17.6889, -8.46467, -8.95639)
+use_collision = true
+size = Vector3(9.52905, 2.24056, 14.5491)
 material = ExtResource("2_cagn7")
+
+[node name="CSGBox3D3" type="CSGBox3D" parent="DirectionalLight3D/map"]
+transform = Transform3D(-0.866025, 2.18168e-08, -0.5, -0.433013, 0.5, 0.75, 0.25, 0.866025, -0.433013, -15.9096, -10.7807, -3.46721)
+use_collision = true
+size = Vector3(7.8606, 5.05753, 4.54202)
+material = ExtResource("2_cagn7")
+
+[node name="CSGMesh3D" type="CSGMesh3D" parent="DirectionalLight3D/map"]
+transform = Transform3D(-5.29025, 1.68176e-07, -1.81107, -2.64513, 1.17895, 2.71661, 1.52717, 2.042, -1.56843, -8.19649, -9.18476, -8.60462)
+use_collision = true
+mesh = SubResource("PrismMesh_hphak")
+material = ExtResource("3_4oo0p")
+
+[node name="AnimatableBody3D" type="AnimatableBody3D" parent="DirectionalLight3D/map"]
+transform = Transform3D(-0.866025, 5.98915e-09, -0.5, -0.433013, 0.5, 0.75, 0.25, 0.866026, -0.433013, -20.2243, -7.18512, -2.92328)
+disable_mode = 2
+physics_material_override = SubResource("PhysicsMaterial_b2w2b")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="DirectionalLight3D/map/AnimatableBody3D"]
+material_override = ExtResource("4_r0bfr")
+mesh = SubResource("BoxMesh_5r0sl")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="DirectionalLight3D/map/AnimatableBody3D"]
+shape = SubResource("ConvexPolygonShape3D_k3i3n")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="DirectionalLight3D/map/AnimatableBody3D"]
+libraries = {
+"": SubResource("AnimationLibrary_imgeu")
+}
+autoplay = "moving plat"
+
+[node name="Player" parent="." instance=ExtResource("4_fgdv0")]
+
+[node name="Stairs3D" type="Path3D" parent="."]
+transform = Transform3D(1.27652e-07, -8.94069e-08, -1, -1.19209e-07, 1, -3.57628e-07, 1, -5.96046e-08, -3.04482e-07, 9.37069, 0, 5.42353)
+curve = SubResource("Curve3D_1axa8")
+script = ExtResource("4_1mejf")
+height = 2.25
+width = 2.389
+stringer_material = ExtResource("5_lb5nh")
+riser_material = ExtResource("6_wj3i4")
+thread_material = ExtResource("7_4a7h4")
+make_simple_collision = true
+
+[node name="Stairs3D2" type="Path3D" parent="."]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 12.7203, 0, -6.22597)
+curve = SubResource("Curve3D_b74bb")
+script = ExtResource("4_1mejf")
+height = 7.25
+width = 2.3
+stringer_material = ExtResource("8_j7h7n")
+riser_material = ExtResource("9_sfgt7")
+thread_material = ExtResource("10_ejp5m")
+make_simple_collision = true
+metadata/_edit_group_ = true
