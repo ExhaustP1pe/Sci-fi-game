@@ -1,0 +1,13 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://fql54anjpi5b"]
+
+[ext_resource type="Texture2D" uid="uid://bnbom8pwxi15o" path="res://Assets/Textures/NaturePackTextures2/Pine_Leaves.png" id="1_4lovx"]
+
+[resource]
+resource_name = "PineTree_Leaves"
+transparency = 2
+alpha_scissor_threshold = 0.67
+alpha_antialiasing_mode = 0
+cull_mode = 2
+diffuse_mode = 3
+albedo_texture = ExtResource("1_4lovx")
+metallic = 1.0

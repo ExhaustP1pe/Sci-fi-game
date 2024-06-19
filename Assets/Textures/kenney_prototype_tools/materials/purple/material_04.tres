@@ -6,5 +6,4 @@
 vertex_color_is_srgb = true
 albedo_texture = ExtResource("1_qyynj")
 uv1_triplanar = true
-uv1_world_triplanar = true
 texture_filter = 5
