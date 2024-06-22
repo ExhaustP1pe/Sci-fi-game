@@ -1,0 +1,6 @@
+*people i need to give credit*
+- kenney assets [sounds,prototype textures,other Ui stuff]
+- Quaternius [nature pack]
+- Johnny Rouddro [Animations - third person controller]
+- The creators of Dialogic addon [I love you]
+- mixamo

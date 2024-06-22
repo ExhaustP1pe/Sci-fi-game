@@ -1,19 +1,21 @@
-[gd_scene load_steps=31 format=3 uid="uid://du6y0jdm8xkgg"]
+[gd_scene load_steps=35 format=3 uid="uid://du6y0jdm8xkgg"]
 
-[ext_resource type="Material" uid="uid://bx6qeabdhq2s" path="res://Assets/Textures/kenney_prototype_tools/materials/dark/material_01.tres" id="1_m475u"]
-[ext_resource type="Material" uid="uid://b7kc8jfs4fowj" path="res://Assets/Textures/kenney_prototype_tools/materials/green/material_02.tres" id="2_cagn7"]
-[ext_resource type="Material" uid="uid://i6ttymvfh5li" path="res://Assets/Textures/kenney_prototype_tools/materials/green/material_09.tres" id="3_4oo0p"]
+[ext_resource type="Material" uid="uid://bx6qeabdhq2s" path="res://Assets/Textures/kenney_prototype_tools/PROTOmaterials/dark/material_01.tres" id="1_m475u"]
+[ext_resource type="Material" uid="uid://b7kc8jfs4fowj" path="res://Assets/Textures/kenney_prototype_tools/PROTOmaterials/green/material_02.tres" id="2_cagn7"]
+[ext_resource type="Material" uid="uid://i6ttymvfh5li" path="res://Assets/Textures/kenney_prototype_tools/PROTOmaterials/green/material_09.tres" id="3_4oo0p"]
 [ext_resource type="Script" path="res://addons/Stairs3D/stairs_3d.gd" id="4_1mejf"]
-[ext_resource type="PackedScene" uid="uid://cr2ersq7g6q6f" path="res://player.tscn" id="4_fgdv0"]
-[ext_resource type="Material" uid="uid://uylhy3ucrinn" path="res://Assets/Textures/kenney_prototype_tools/materials/purple/material_04.tres" id="4_sipym"]
-[ext_resource type="Material" uid="uid://bhvnpiqj75ju8" path="res://Assets/Textures/kenney_prototype_tools/materials/green/material_12.tres" id="5_lb5nh"]
-[ext_resource type="Material" uid="uid://s6f63ep6y607" path="res://Assets/Textures/kenney_prototype_tools/materials/orange/material_12.tres" id="6_wj3i4"]
-[ext_resource type="Material" uid="uid://d0gmvf62uyhd0" path="res://Assets/Textures/kenney_prototype_tools/materials/red/material_01.tres" id="7_4a7h4"]
-[ext_resource type="Material" uid="uid://cimqcwahb0vnh" path="res://Assets/Textures/kenney_prototype_tools/materials/purple/material_05.tres" id="8_j7h7n"]
-[ext_resource type="Material" uid="uid://oob6p5w3hsl5" path="res://Assets/Textures/kenney_prototype_tools/materials/red/material_09.tres" id="9_sfgt7"]
-[ext_resource type="Material" uid="uid://dxlnifhgft6h5" path="res://Assets/Textures/kenney_prototype_tools/materials/green/material_01.tres" id="10_ejp5m"]
+[ext_resource type="Material" uid="uid://bhvnpiqj75ju8" path="res://Assets/Textures/kenney_prototype_tools/PROTOmaterials/green/material_12.tres" id="5_lb5nh"]
+[ext_resource type="Texture2D" uid="uid://joocxi00ru7" path="res://Assets/Textures/kenney_prototype_tools/textures/purple/texture_04.png" id="6_7cquy"]
+[ext_resource type="Material" uid="uid://s6f63ep6y607" path="res://Assets/Textures/kenney_prototype_tools/PROTOmaterials/orange/material_12.tres" id="6_wj3i4"]
+[ext_resource type="Material" uid="uid://d0gmvf62uyhd0" path="res://Assets/Textures/kenney_prototype_tools/PROTOmaterials/red/material_01.tres" id="7_4a7h4"]
+[ext_resource type="Material" uid="uid://cimqcwahb0vnh" path="res://Assets/Textures/kenney_prototype_tools/PROTOmaterials/purple/material_05.tres" id="8_j7h7n"]
+[ext_resource type="Material" uid="uid://oob6p5w3hsl5" path="res://Assets/Textures/kenney_prototype_tools/PROTOmaterials/red/material_09.tres" id="9_sfgt7"]
+[ext_resource type="Material" uid="uid://dxlnifhgft6h5" path="res://Assets/Textures/kenney_prototype_tools/PROTOmaterials/green/material_01.tres" id="10_ejp5m"]
+[ext_resource type="PackedScene" uid="uid://qifytbqaqy81" path="res://Assets/Models/Constance-Scythe.glb" id="15_1b77d"]
+[ext_resource type="Texture2D" uid="uid://bdt4o1woid1qg" path="res://Assets/Textures/kenney_prototype_tools/textures/orange/texture_11.png" id="15_a8jrn"]
 [ext_resource type="Material" uid="uid://cwge2uwnelxa0" path="res://Assets/Models/Nature Pack/PineTree_3.tres" id="15_soudf"]
 [ext_resource type="Material" uid="uid://fql54anjpi5b" path="res://Assets/Models/Nature Pack/PineTreeLeaves.tres" id="16_8xkar"]
+[ext_resource type="PackedScene" uid="uid://0oynp0xnkbh6" path="res://Player/player.tscn" id="16_tnohq"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_vopxw"]
 sky_top_color = Color(0.388235, 0.509804, 0.701961, 1)
@@ -31,9 +33,15 @@ sky = SubResource("Sky_68hok")
 [sub_resource type="PrismMesh" id="PrismMesh_hphak"]
 left_to_right = 1.0
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_j8nbv"]
+vertex_color_is_srgb = true
+albedo_texture = ExtResource("6_7cquy")
+uv1_triplanar = true
+texture_filter = 5
+
 [sub_resource type="BoxMesh" id="BoxMesh_5r0sl"]
 lightmap_size_hint = Vector2i(24, 21)
-material = ExtResource("4_sipym")
+material = SubResource("StandardMaterial3D_j8nbv")
 size = Vector3(2, 0.5, 2)
 
 [sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_k3i3n"]
@@ -196,6 +204,13 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_a8i8p")
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5xwoc"]
+vertex_color_is_srgb = true
+albedo_texture = ExtResource("15_a8jrn")
+uv1_triplanar = true
+uv1_world_triplanar = true
+texture_filter = 5
+
 [node name="Test" type="Node3D"]
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
@@ -205,53 +220,55 @@ environment = SubResource("Environment_ewug7")
 transform = Transform3D(-0.866025, -0.433013, 0.25, 0, 0.5, 0.866025, -0.5, 0.75, -0.433013, 0, 13.1132, 0)
 shadow_enabled = true
 
-[node name="map" type="Node3D" parent="DirectionalLight3D"]
+[node name="Constance-Scythe" parent="." instance=ExtResource("15_1b77d")]
+transform = Transform3D(-0.947741, 0, -0.319042, 0, 1, 0, 0.319042, 0, -0.947741, 12.759, 2.18555, 12.8431)
 
-[node name="CSGBox3D" type="CSGBox3D" parent="DirectionalLight3D/map"]
-transform = Transform3D(-0.866025, -2.28867e-08, -0.5, -0.433013, 0.5, 0.75, 0.25, 0.866025, -0.433013, -1.01042e-07, -6.68284, -11.575)
+[node name="map" type="Node3D" parent="."]
+transform = Transform3D(-0.866025, -0.433013, 0.25, 0, 0.5, 0.866025, -0.5, 0.75, -0.433013, 0, 13.1132, 0)
+
+[node name="CSGBox3D" type="CSGBox3D" parent="map"]
+transform = Transform3D(-0.866025, -2.38418e-07, -0.5, -0.433013, 0.5, 0.75, 0.25, 0.866025, -0.433013, -1.01042e-07, -6.68284, -11.575)
 use_collision = true
 size = Vector3(50, 0.5, 50)
 material = ExtResource("1_m475u")
 
-[node name="CSGBox3D2" type="CSGBox3D" parent="DirectionalLight3D/map"]
-transform = Transform3D(-0.866025, 2.18168e-08, -0.5, -0.433013, 0.5, 0.75, 0.25, 0.866025, -0.433013, -17.6889, -8.46467, -8.95639)
+[node name="CSGBox3D2" type="CSGBox3D" parent="map"]
+transform = Transform3D(-0.866025, -2.08616e-07, -0.5, -0.433013, 0.5, 0.75, 0.25, 0.866025, -0.433013, -17.6889, -8.46467, -8.95639)
 use_collision = true
 size = Vector3(9.52905, 2.24056, 14.5491)
 material = ExtResource("2_cagn7")
 
-[node name="CSGBox3D3" type="CSGBox3D" parent="DirectionalLight3D/map"]
-transform = Transform3D(-0.866025, 2.18168e-08, -0.5, -0.433013, 0.5, 0.75, 0.25, 0.866025, -0.433013, -15.9096, -10.7807, -3.46721)
+[node name="CSGBox3D3" type="CSGBox3D" parent="map"]
+transform = Transform3D(-0.866025, -2.08616e-07, -0.5, -0.433013, 0.5, 0.75, 0.25, 0.866025, -0.433013, -15.9096, -10.7807, -3.46721)
 use_collision = true
 size = Vector3(7.8606, 5.05753, 4.54202)
 material = ExtResource("2_cagn7")
 
-[node name="CSGMesh3D" type="CSGMesh3D" parent="DirectionalLight3D/map"]
-transform = Transform3D(-5.29025, 1.68176e-07, -1.81107, -2.64513, 1.17895, 2.71661, 1.52717, 2.042, -1.56843, -8.19649, -9.18476, -8.60462)
+[node name="CSGMesh3D" type="CSGMesh3D" parent="map"]
+transform = Transform3D(-5.29025, 1.05406e-06, -1.81107, -2.64513, 1.17895, 2.7166, 1.52717, 2.042, -1.56843, -8.19649, -9.18476, -8.60462)
 use_collision = true
 mesh = SubResource("PrismMesh_hphak")
 material = ExtResource("3_4oo0p")
 
-[node name="AnimatableBody3D" type="AnimatableBody3D" parent="DirectionalLight3D/map"]
-transform = Transform3D(-0.866025, 5.98915e-09, -0.5, -0.433013, 0.5, 0.75, 0.25, 0.866026, -0.433013, -19.6264, -8.0821, -2.40541)
+[node name="AnimatableBody3D" type="AnimatableBody3D" parent="map"]
+transform = Transform3D(-0.866025, 2.98023e-08, -0.5, -0.433013, 0.5, 0.75, 0.25, 0.866026, -0.433012, -19.6264, -8.0821, -2.40541)
 disable_mode = 2
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="DirectionalLight3D/map/AnimatableBody3D"]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="map/AnimatableBody3D"]
 transform = Transform3D(1, 4.44089e-16, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
 mesh = SubResource("BoxMesh_5r0sl")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="DirectionalLight3D/map/AnimatableBody3D"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="map/AnimatableBody3D"]
 shape = SubResource("ConvexPolygonShape3D_k3i3n")
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="DirectionalLight3D/map/AnimatableBody3D"]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="map/AnimatableBody3D"]
 libraries = {
 "": SubResource("AnimationLibrary_imgeu")
 }
 autoplay = "moving plat"
 
-[node name="Player" parent="." instance=ExtResource("4_fgdv0")]
-
-[node name="Stairs3D" type="Path3D" parent="."]
-transform = Transform3D(1.27652e-07, -8.94069e-08, -1, -1.19209e-07, 1, -3.57628e-07, 1, -5.96046e-08, -3.04482e-07, 9.37069, 0, 5.42353)
+[node name="Stairs3D" type="Path3D" parent="map"]
+transform = Transform3D(-0.5, 1.22132e-07, 0.866025, 0.75, 0.5, 0.433013, -0.433013, 0.866026, -0.25, -10.827, -6.54658, -11.3621)
 curve = SubResource("Curve3D_1axa8")
 script = ExtResource("4_1mejf")
 height = 2.25
@@ -261,8 +278,8 @@ riser_material = ExtResource("6_wj3i4")
 thread_material = ExtResource("7_4a7h4")
 make_simple_collision = true
 
-[node name="Stairs3D2" type="Path3D" parent="."]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 12.7203, 0, -6.22597)
+[node name="Stairs3D2" type="Path3D" parent="map"]
+transform = Transform3D(-0.5, 1.49012e-08, 0.866025, 0.75, 0.5, 0.433013, -0.433013, 0.866026, -0.25, -7.90311, -16.7341, -5.48037)
 curve = SubResource("Curve3D_b74bb")
 script = ExtResource("4_1mejf")
 height = 7.25
@@ -273,14 +290,48 @@ thread_material = ExtResource("10_ejp5m")
 make_simple_collision = true
 metadata/_edit_group_ = true
 
-[node name="PineTree_3" type="MeshInstance3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17.705, 7.24894, 1.47542)
+[node name="PineTree_3" type="MeshInstance3D" parent="map"]
+transform = Transform3D(-0.866025, 1.49012e-08, -0.5, -0.433013, 0.5, 0.75, 0.25, 0.866026, -0.433013, -16.0707, -9.49206, -1.29122)
 mesh = SubResource("ArrayMesh_6i0uo")
 skeleton = NodePath("")
 
-[node name="PineTree_4" type="MeshInstance3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.8911, 7.24894, -0.484439)
+[node name="PineTree_4" type="MeshInstance3D" parent="map"]
+transform = Transform3D(-0.866025, 1.49012e-08, -0.5, -0.433013, 0.5, 0.75, 0.25, 0.866026, -0.433013, -14.3859, -10.6095, -0.646054)
 mesh = SubResource("ArrayMesh_nbpd0")
 skeleton = NodePath("")
 surface_material_override/0 = ExtResource("15_soudf")
 surface_material_override/1 = ExtResource("16_8xkar")
+
+[node name="CSGCylinder3D" type="CSGCylinder3D" parent="map"]
+transform = Transform3D(-0.866026, -2.5332e-07, -0.5, -0.433013, 0.5, 0.75, 0.25, 0.866026, -0.433013, -8.2865, 7.85073, -15.1074)
+use_collision = true
+radius = 2.80342
+height = 0.827289
+smooth_faces = false
+material = ExtResource("10_ejp5m")
+
+[node name="CSGCylinder3D2" type="CSGCylinder3D" parent="map"]
+transform = Transform3D(-0.866026, -2.5332e-07, -0.5, -0.433013, 0.5, 0.75, 0.25, 0.866026, -0.433013, -11.7401, 2.58758, -14.969)
+use_collision = true
+radius = 1.84109
+height = 0.0990593
+smooth_faces = false
+material = ExtResource("10_ejp5m")
+
+[node name="CSGBox3D4" type="CSGBox3D" parent="map"]
+transform = Transform3D(-0.866026, -2.5332e-07, -0.5, -0.433013, 0.5, 0.75, 0.25, 0.866026, -0.433013, -15.1451, -8.03041, -5.00372)
+size = Vector3(0.974304, 5.0567, 0.144531)
+material = SubResource("StandardMaterial3D_5xwoc")
+
+[node name="CSGBox3D5" type="CSGBox3D" parent="map"]
+transform = Transform3D(-0.866026, -2.5332e-07, -0.5, -0.433013, 0.5, 0.75, 0.25, 0.866026, -0.433013, -17.7899, -9.93426, -5.36048)
+size = Vector3(1.82895, 2.56644, 0.144531)
+material = ExtResource("6_wj3i4")
+
+[node name="CSGSphere3D" type="CSGSphere3D" parent="map"]
+transform = Transform3D(-3.67195, -1.07408e-06, -2.12, -1.83597, 2.12, 3.18, 1.06, 3.67195, -1.83597, -9.97811, 0.657145, -14.7296)
+use_collision = true
+material = ExtResource("9_sfgt7")
+
+[node name="Player" parent="." instance=ExtResource("16_tnohq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.68399, -0.00245857, 0.45442)
