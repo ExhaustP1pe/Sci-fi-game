@@ -18,18 +18,19 @@ class_name Stance
 
 func is_blocked() -> bool:
 	return col_raycast and col_raycast.is_colliding()
-	
+
 
 func get_movement_state(state_name : String) -> MovementState:
 	
 	match state_name:
-		"Idle":
+		"idle":
 			return idle_state
-		"Walk":
+		"walk":
 			return walk_state
-		"Run":
+		"run":
 			return run_state
-		"Sprint":
+		"sprint":
 			return sprint_state
 		_:
 			return idle_state
+	

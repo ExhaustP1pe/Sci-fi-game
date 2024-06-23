@@ -1,137 +1,152 @@
-[gd_scene load_steps=51 format=3 uid="uid://0oynp0xnkbh6"]
+[gd_scene load_steps=70 format=3 uid="uid://cjxioru16jia3"]
 
-[ext_resource type="Script" path="res://Player/PlayerScripts/player.gd" id="1_0b700"]
-[ext_resource type="PackedScene" uid="uid://g0xmhymgrsbe" path="res://Assets/Models/Characters/xbot.tscn" id="1_4v3m0"]
-[ext_resource type="Script" path="res://Player/PlayerScripts/movement_controller.gd" id="2_8kdjr"]
-[ext_resource type="Resource" uid="uid://dq8737i8to08k" path="res://Player/JumpStates/Air_Jump.tres" id="2_ea3t7"]
-[ext_resource type="Resource" uid="uid://dqiusq2uum8bc" path="res://Player/MovementStates/upright/Upright_Idle.tres" id="2_rmqlc"]
-[ext_resource type="Script" path="res://Player/PlayerScripts/camera_Controller.gd" id="2_ylwrj"]
-[ext_resource type="Resource" uid="uid://crg1qik8u4maj" path="res://Player/MovementStates/upright/Upright_walk.tres" id="3_cs84h"]
-[ext_resource type="Resource" uid="uid://33vsrhk0rbpc" path="res://Player/JumpStates/Ground_Jump.tres" id="3_r7dhq"]
-[ext_resource type="Resource" uid="uid://btdy8cre5545f" path="res://Player/MovementStates/upright/Upright_run.tres" id="4_u1mok"]
-[ext_resource type="Resource" uid="uid://c85tyonh7x3df" path="res://Player/MovementStates/upright/Upright_sprint.tres" id="5_u21jl"]
-[ext_resource type="Script" path="res://Player/PlayerScripts/animation_controller.gd" id="7_eaxq0"]
-[ext_resource type="Script" path="res://Player/PlayerScripts/stance.gd" id="10_ky5k8"]
-[ext_resource type="Resource" uid="uid://2t7aftxf27ma" path="res://Player/MovementStates/stealth/Stealth_idle.tres" id="11_gjebj"]
-[ext_resource type="Resource" uid="uid://cowtrcn5tcmy1" path="res://Player/MovementStates/stealth/Stealth_walk.tres" id="12_dh40f"]
-[ext_resource type="Resource" uid="uid://cfcw143gqr4w4" path="res://Player/MovementStates/crouch/Crouch_idle.tres" id="13_3cgbw"]
-[ext_resource type="Resource" uid="uid://cvsi5aaya5ynj" path="res://Player/MovementStates/crouch/Crouch_walk.tres" id="14_fp7k8"]
-[ext_resource type="Resource" uid="uid://cxlerdolyf67o" path="res://Player/MovementStates/crouch/Crouch_sprint.tres" id="15_wtyel"]
-[ext_resource type="Resource" uid="uid://dd35qik5tg020" path="res://Player/MovementStates/prone/Prone_idle.tres" id="16_sk2wh"]
-[ext_resource type="Resource" uid="uid://rm3npsm24xh4" path="res://Player/MovementStates/prone/Prone_walk.tres" id="17_q2twh"]
-[ext_resource type="Resource" uid="uid://hvguyoqgjm6w" path="res://Player/MovementStates/prone/Prone_sprint.tres" id="18_7smco"]
+[ext_resource type="Script" path="res://Player/PlayerScripts/Player.gd" id="3_t3t17"]
+[ext_resource type="Resource" uid="uid://f2c3g2k5oidj" path="res://Player/JumpStates/air_jump.tres" id="4_ofenl"]
+[ext_resource type="Resource" uid="uid://b1mynjpc0mwvp" path="res://Player/JumpStates/ground_jump.tres" id="5_heeh6"]
+[ext_resource type="Script" path="res://Player/ActiveSkill/active_skill_controller.gd" id="6_v68le"]
+[ext_resource type="Script" path="res://Player/PlayerScripts/movement_controller.gd" id="7_dei83"]
+[ext_resource type="Script" path="res://Player/PlayerScripts/animation_controller.gd" id="8_08hrk"]
+[ext_resource type="Script" path="res://Player/PlayerScripts/stance.gd" id="9_1mhpp"]
+[ext_resource type="Resource" uid="uid://d1r1tgmafqsly" path="res://Player/MovementStates/upright/upright_idle.tres" id="10_tbgld"]
+[ext_resource type="Resource" uid="uid://dfjf8bepg1ura" path="res://Player/MovementStates/upright/upright_walk.tres" id="11_c8igh"]
+[ext_resource type="Resource" uid="uid://bst4ytials11d" path="res://Player/MovementStates/upright/upright_run.tres" id="12_mdy0q"]
+[ext_resource type="Resource" uid="uid://c02mq447kp5yw" path="res://Player/MovementStates/upright/upright_sprint.tres" id="13_hcr22"]
+[ext_resource type="Resource" uid="uid://dhetjuk4dx6ke" path="res://Player/MovementStates/stealth/stealth_idle.tres" id="14_cydkq"]
+[ext_resource type="Resource" uid="uid://f75acjtq1s1p" path="res://Player/MovementStates/stealth/stealth_walk.tres" id="15_1gth8"]
+[ext_resource type="Resource" uid="uid://b8gxgwxgcffn3" path="res://Player/MovementStates/crouch/crouch_idle.tres" id="16_um7s7"]
+[ext_resource type="Resource" uid="uid://chlo73epqnjv5" path="res://Player/MovementStates/crouch/crouch_walk.tres" id="17_hw7cs"]
+[ext_resource type="Resource" uid="uid://b6d3nd27lewdo" path="res://Player/MovementStates/crouch/crouch_sprint.tres" id="18_wgs3g"]
+[ext_resource type="Resource" uid="uid://ciavsiq3ylqo" path="res://Player/MovementStates/prone/prone_idle.tres" id="19_ei2h6"]
+[ext_resource type="Resource" uid="uid://damtko06ahl05" path="res://Player/MovementStates/prone/prone_walk.tres" id="20_evda4"]
+[ext_resource type="PackedScene" uid="uid://g0xmhymgrsbe" path="res://Assets/Models/Characters/xbot.tscn" id="20_n3wry"]
+[ext_resource type="PackedScene" uid="uid://bhn6espa32eot" path="res://Player/Constance_Scythe.tscn" id="21_5grcu"]
+[ext_resource type="Resource" uid="uid://bpn08dfev0uoe" path="res://Player/MovementStates/prone/prone_sprint.tres" id="21_gccp6"]
+[ext_resource type="Script" path="res://Player/ActiveSkill/skills_container.gd" id="24_jddri"]
+[ext_resource type="Script" path="res://Player/ActiveSkill/active_skill.gd" id="25_yly44"]
+[ext_resource type="Shader" path="res://GPUTrail-main/shaders/trail.gdshader" id="26_u0q5k"]
+[ext_resource type="Shader" path="res://GPUTrail-main/shaders/trail_draw_pass.gdshader" id="27_bqcsr"]
+[ext_resource type="Texture2D" uid="uid://crk6pkb7e5rwc" path="res://GPUTrail-main/defaults/texture.tres" id="28_kqquw"]
+[ext_resource type="Texture2D" uid="uid://ct31fhxvcragr" path="res://GPUTrail-main/defaults/curve.tres" id="29_ri4k2"]
+[ext_resource type="Script" path="res://GPUTrail-main/GPUTrail3D.gd" id="31_4n53q"]
+[ext_resource type="Script" path="res://Player/PlayerScripts/camera_controller.gd" id="32_c4to6"]
 
-[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_agq8m"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_5xlvj"]
+shader = ExtResource("26_u0q5k")
 
-[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_sreo7"]
-radius = 0.44601
-height = 1.28878
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_363x5"]
+resource_local_to_scene = true
+render_priority = 0
+shader = ExtResource("27_bqcsr")
+shader_parameter/emmission_transform = Projection(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1)
+shader_parameter/flags = 40
+shader_parameter/tex = ExtResource("28_kqquw")
+shader_parameter/color_ramp = ExtResource("28_kqquw")
+shader_parameter/curve = ExtResource("29_ri4k2")
 
-[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_l78aw"]
-radius = 0.391443
-height = 1.7322
+[sub_resource type="QuadMesh" id="QuadMesh_cuvhi"]
+material = SubResource("ShaderMaterial_363x5")
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ghhvt"]
-albedo_color = Color(0.607772, 0.464811, 0.274094, 1)
-metallic = 0.8
-roughness = 0.6
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_inket"]
-albedo_color = Color(0.270785, 0.376447, 0.545412, 1)
-metallic = 0.84
-roughness = 0.5
-
-[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_ujlkw"]
-animation = &"jump"
-
-[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_s1iwb"]
-animation = &"air_jump"
-
-[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_ji62m"]
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_15s3x"]
 animation = &"falling"
 
-[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_s5jr0"]
-animation = &"crouch_idle"
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_xln3g"]
+animation = &"air_jump"
 
-[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_snurp"]
-animation = &"crouch_walk"
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_3vqed"]
+animation = &"jump"
 
-[sub_resource type="AnimationNodeBlendSpace1D" id="AnimationNodeBlendSpace1D_nxlov"]
-blend_point_0/node = SubResource("AnimationNodeAnimation_s5jr0")
-blend_point_0/pos = 0.0
-blend_point_1/node = SubResource("AnimationNodeAnimation_snurp")
-blend_point_1/pos = 1.0
-min_space = 0.0
-snap = 1.0
+[sub_resource type="AnimationNodeOneShot" id="AnimationNodeOneShot_oux75"]
+fadein_time = 0.15
+fadeout_time = 0.5
 
-[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_q4vcj"]
-animation = &"prone_idle"
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_ehaji"]
+animation = &"sword_slice_1"
 
-[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_2k7xs"]
-animation = &"crawl"
+[sub_resource type="AnimationNodeTimeScale" id="AnimationNodeTimeScale_3abgc"]
 
-[sub_resource type="AnimationNodeBlendSpace1D" id="AnimationNodeBlendSpace1D_jcguk"]
-blend_point_0/node = SubResource("AnimationNodeAnimation_q4vcj")
-blend_point_0/pos = 0.0
-blend_point_1/node = SubResource("AnimationNodeAnimation_2k7xs")
-blend_point_1/pos = 1.0
-min_space = 0.0
-snap = 1.0
+[sub_resource type="AnimationNodeBlendTree" id="AnimationNodeBlendTree_mmmld"]
+graph_offset = Vector2(-441.849, -29.638)
+nodes/Animation/node = SubResource("AnimationNodeAnimation_ehaji")
+nodes/Animation/position = Vector2(-40, 140)
+nodes/TimeScale/node = SubResource("AnimationNodeTimeScale_3abgc")
+nodes/TimeScale/position = Vector2(140, 140)
+node_connections = [&"TimeScale", 0, &"Animation", &"output", 0, &"TimeScale"]
 
-[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_w5w1b"]
-animation = &"stealth_idle"
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_pnm2d"]
+animation = &"sword_slice_2"
 
-[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_757uf"]
-animation = &"stealth_walk"
+[sub_resource type="AnimationNodeTimeScale" id="AnimationNodeTimeScale_duiib"]
 
-[sub_resource type="AnimationNodeBlendSpace1D" id="AnimationNodeBlendSpace1D_04mi0"]
-blend_point_0/node = SubResource("AnimationNodeAnimation_w5w1b")
-blend_point_0/pos = 0.0
-blend_point_1/node = SubResource("AnimationNodeAnimation_757uf")
-blend_point_1/pos = 1.0
-min_space = 0.0
-snap = 1.0
+[sub_resource type="AnimationNodeBlendTree" id="AnimationNodeBlendTree_0nawy"]
+graph_offset = Vector2(-302.651, 73.723)
+nodes/Animation/node = SubResource("AnimationNodeAnimation_pnm2d")
+nodes/Animation/position = Vector2(-20, 140)
+nodes/TimeScale/node = SubResource("AnimationNodeTimeScale_duiib")
+nodes/TimeScale/position = Vector2(153.065, 135.762)
+node_connections = [&"TimeScale", 0, &"Animation", &"output", 0, &"TimeScale"]
 
-[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_g0i26"]
-animation = &"idle"
-
-[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_fq1ik"]
-animation = &"walk"
-
-[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_pucst"]
-animation = &"running"
-
-[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_viv2w"]
-animation = &"sprint"
-
-[sub_resource type="AnimationNodeBlendSpace1D" id="AnimationNodeBlendSpace1D_n8uay"]
-blend_point_0/node = SubResource("AnimationNodeAnimation_g0i26")
-blend_point_0/pos = 0.0
-blend_point_1/node = SubResource("AnimationNodeAnimation_fq1ik")
-blend_point_1/pos = 1.0
-blend_point_2/node = SubResource("AnimationNodeAnimation_pucst")
-blend_point_2/pos = 2.0
-blend_point_3/node = SubResource("AnimationNodeAnimation_viv2w")
-blend_point_3/pos = 3.0
-min_space = 0.0
-max_space = 3.0
-snap = 1.0
-
-[sub_resource type="AnimationNodeOneShot" id="AnimationNodeOneShot_p8gym"]
-
-[sub_resource type="AnimationNodeOneShot" id="AnimationNodeOneShot_cuq2i"]
-
-[sub_resource type="AnimationNodeTimeScale" id="AnimationNodeTimeScale_5uk81"]
-
-[sub_resource type="AnimationNodeBlend2" id="AnimationNodeBlend2_kuwpx"]
-
-[sub_resource type="Curve" id="Curve_1b4jv"]
+[sub_resource type="Curve" id="Curve_2amo6"]
 _data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(1, 1), 0.0, 0.0, 0, 0]
 point_count = 2
 
-[sub_resource type="AnimationNodeTransition" id="AnimationNodeTransition_gx767"]
-xfade_time = 0.25
-xfade_curve = SubResource("Curve_1b4jv")
+[sub_resource type="AnimationNodeTransition" id="AnimationNodeTransition_nab8s"]
+xfade_time = 0.15
+xfade_curve = SubResource("Curve_2amo6")
+allow_transition_to_self = true
+input_0/name = "end_attack"
+input_0/auto_advance = false
+input_0/reset = true
+input_1/name = "attack_buffer_0"
+input_1/auto_advance = false
+input_1/reset = true
+input_2/name = "attack_buffer_1"
+input_2/auto_advance = false
+input_2/reset = true
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_2asgt"]
+animation = &"crouch_idle"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_r0dd4"]
+animation = &"crouch_walk"
+
+[sub_resource type="AnimationNodeBlendSpace1D" id="AnimationNodeBlendSpace1D_ny4iy"]
+blend_point_0/node = SubResource("AnimationNodeAnimation_2asgt")
+blend_point_0/pos = 0.0
+blend_point_1/node = SubResource("AnimationNodeAnimation_r0dd4")
+blend_point_1/pos = 1.0
+min_space = 0.0
+snap = 1.0
+
+[sub_resource type="AnimationNodeOneShot" id="AnimationNodeOneShot_wkvd5"]
+fadein_time = 0.15
+fadeout_time = 0.5
+autorestart_delay = 0.1
+
+[sub_resource type="AnimationNodeTimeScale" id="AnimationNodeTimeScale_c8rby"]
+
+[sub_resource type="AnimationNodeBlend2" id="AnimationNodeBlend2_2ywac"]
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_tk1oh"]
+animation = &"prone_idle"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_flbbc"]
+animation = &"crawl"
+
+[sub_resource type="AnimationNodeBlendSpace1D" id="AnimationNodeBlendSpace1D_io6pj"]
+blend_point_0/node = SubResource("AnimationNodeAnimation_tk1oh")
+blend_point_0/pos = 0.0
+blend_point_1/node = SubResource("AnimationNodeAnimation_flbbc")
+blend_point_1/pos = 1.0
+min_space = 0.0
+snap = 1.0
+
+[sub_resource type="Curve" id="Curve_wpw1s"]
+_data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(1, 1), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="AnimationNodeTransition" id="AnimationNodeTransition_x5vxo"]
+xfade_time = 0.15
+xfade_curve = SubResource("Curve_wpw1s")
 input_0/name = "upright"
 input_0/auto_advance = false
 input_0/reset = true
@@ -145,222 +160,398 @@ input_3/name = "prone"
 input_3/auto_advance = false
 input_3/reset = true
 
-[sub_resource type="AnimationNodeBlendTree" id="AnimationNodeBlendTree_fn1gy"]
-graph_offset = Vector2(-1073.91, 72.2687)
-nodes/Animation/node = SubResource("AnimationNodeAnimation_ji62m")
-nodes/Animation/position = Vector2(180, -60)
-"nodes/Animation 2/node" = SubResource("AnimationNodeAnimation_ujlkw")
-"nodes/Animation 2/position" = Vector2(640, 200)
-"nodes/Animation 3/node" = SubResource("AnimationNodeAnimation_s1iwb")
-"nodes/Animation 3/position" = Vector2(820, 200)
-nodes/Crouch_movement_blend/node = SubResource("AnimationNodeBlendSpace1D_nxlov")
-nodes/Crouch_movement_blend/position = Vector2(-480, 140)
-nodes/Prone_movement_blend/node = SubResource("AnimationNodeBlendSpace1D_jcguk")
-nodes/Prone_movement_blend/position = Vector2(-480, 320)
-nodes/Stealth_movement_blend/node = SubResource("AnimationNodeBlendSpace1D_04mi0")
-nodes/Stealth_movement_blend/position = Vector2(-480, 0)
-nodes/Upright_movement_blend/node = SubResource("AnimationNodeBlendSpace1D_n8uay")
-nodes/Upright_movement_blend/position = Vector2(-480, -140)
-nodes/air_jump/node = SubResource("AnimationNodeOneShot_p8gym")
-nodes/air_jump/position = Vector2(820, -40)
-nodes/jump/node = SubResource("AnimationNodeOneShot_cuq2i")
-nodes/jump/position = Vector2(640, -40)
-nodes/movement_anim_speed/node = SubResource("AnimationNodeTimeScale_5uk81")
-nodes/movement_anim_speed/position = Vector2(140, 140)
-nodes/on_floor_blend/node = SubResource("AnimationNodeBlend2_kuwpx")
-nodes/on_floor_blend/position = Vector2(400, 0)
-nodes/output/position = Vector2(1020, 140)
-nodes/stance_transition/node = SubResource("AnimationNodeTransition_gx767")
-nodes/stance_transition/position = Vector2(-100, 60)
-node_connections = [&"air_jump", 0, &"jump", &"air_jump", 1, &"Animation 3", &"jump", 0, &"on_floor_blend", &"jump", 1, &"Animation 2", &"movement_anim_speed", 0, &"stance_transition", &"on_floor_blend", 0, &"Animation", &"on_floor_blend", 1, &"movement_anim_speed", &"output", 0, &"air_jump", &"stance_transition", 0, &"Upright_movement_blend", &"stance_transition", 1, &"Stealth_movement_blend", &"stance_transition", 2, &"Crouch_movement_blend", &"stance_transition", 3, &"Prone_movement_blend"]
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_kss0i"]
+animation = &"stealth_idle"
 
-[sub_resource type="SphereShape3D" id="SphereShape3D_02agn"]
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_obja3"]
+animation = &"stealth_walk"
+
+[sub_resource type="AnimationNodeBlendSpace1D" id="AnimationNodeBlendSpace1D_ltqii"]
+blend_point_0/node = SubResource("AnimationNodeAnimation_kss0i")
+blend_point_0/pos = 0.0
+blend_point_1/node = SubResource("AnimationNodeAnimation_obja3")
+blend_point_1/pos = 1.0
+min_space = 0.0
+snap = 1.0
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_c7wwn"]
+animation = &"sword_idle"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_o506p"]
+animation = &"sword_walk"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_g1mbk"]
+animation = &"sword_run"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_qi3eq"]
+animation = &"sword_sprint"
+
+[sub_resource type="AnimationNodeBlendSpace1D" id="AnimationNodeBlendSpace1D_yx6j2"]
+blend_point_0/node = SubResource("AnimationNodeAnimation_c7wwn")
+blend_point_0/pos = 0.0
+blend_point_1/node = SubResource("AnimationNodeAnimation_o506p")
+blend_point_1/pos = 1.0
+blend_point_2/node = SubResource("AnimationNodeAnimation_g1mbk")
+blend_point_2/pos = 2.0
+blend_point_3/node = SubResource("AnimationNodeAnimation_qi3eq")
+blend_point_3/pos = 3.0
+min_space = 0.0
+max_space = 3.0
+snap = 1.0
+
+[sub_resource type="AnimationNodeBlendTree" id="AnimationNodeBlendTree_wcl6t"]
+nodes/Animation/node = SubResource("AnimationNodeAnimation_3vqed")
+nodes/Animation/position = Vector2(500, 480)
+"nodes/Animation 2/node" = SubResource("AnimationNodeAnimation_15s3x")
+"nodes/Animation 2/position" = Vector2(60, 200)
+"nodes/Animation 3/node" = SubResource("AnimationNodeAnimation_xln3g")
+"nodes/Animation 3/position" = Vector2(700, 480)
+nodes/air_jump/node = SubResource("AnimationNodeOneShot_oux75")
+nodes/air_jump/position = Vector2(700, 260)
+nodes/attack_buffer_0/node = SubResource("AnimationNodeBlendTree_mmmld")
+nodes/attack_buffer_0/position = Vector2(880, 420)
+nodes/attack_buffer_1/node = SubResource("AnimationNodeBlendTree_0nawy")
+nodes/attack_buffer_1/position = Vector2(880, 540)
+nodes/attack_transition/node = SubResource("AnimationNodeTransition_nab8s")
+nodes/attack_transition/position = Vector2(1080, 280)
+nodes/crouch_movement_blend/node = SubResource("AnimationNodeBlendSpace1D_ny4iy")
+nodes/crouch_movement_blend/position = Vector2(-540, 480)
+nodes/ground_jump/node = SubResource("AnimationNodeOneShot_wkvd5")
+nodes/ground_jump/position = Vector2(500, 260)
+nodes/movement_anim_speed/node = SubResource("AnimationNodeTimeScale_c8rby")
+nodes/movement_anim_speed/position = Vector2(-20, 340)
+nodes/on_floor_blend/node = SubResource("AnimationNodeBlend2_2ywac")
+nodes/on_floor_blend/position = Vector2(280, 260)
+nodes/output/position = Vector2(1420, 260)
+nodes/prone_movement_blend/node = SubResource("AnimationNodeBlendSpace1D_io6pj")
+nodes/prone_movement_blend/position = Vector2(-540, 620)
+nodes/stance_transition/node = SubResource("AnimationNodeTransition_x5vxo")
+nodes/stance_transition/position = Vector2(-200, 240)
+nodes/stealth_movement_blend/node = SubResource("AnimationNodeBlendSpace1D_ltqii")
+nodes/stealth_movement_blend/position = Vector2(-540, 340)
+nodes/upright_movement_blend/node = SubResource("AnimationNodeBlendSpace1D_yx6j2")
+nodes/upright_movement_blend/position = Vector2(-540, 200)
+node_connections = [&"air_jump", 0, &"ground_jump", &"air_jump", 1, &"Animation 3", &"attack_transition", 0, &"air_jump", &"attack_transition", 1, &"attack_buffer_0", &"attack_transition", 2, &"attack_buffer_1", &"ground_jump", 0, &"on_floor_blend", &"ground_jump", 1, &"Animation", &"movement_anim_speed", 0, &"stance_transition", &"on_floor_blend", 0, &"Animation 2", &"on_floor_blend", 1, &"movement_anim_speed", &"output", 0, &"attack_transition", &"stance_transition", 0, &"upright_movement_blend", &"stance_transition", 1, &"stealth_movement_blend", &"stance_transition", 2, &"crouch_movement_blend", &"stance_transition", 3, &"prone_movement_blend"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_ykg3r"]
 radius = 0.07
 
-[node name="Player" type="CharacterBody3D"]
-script = ExtResource("1_0b700")
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_eyiaf"]
+radius = 0.45
+height = 1.5
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_47wx7"]
+radius = 0.45
+height = 0.94
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_vebkc"]
+height = 0.48
+radius = 0.551153
+
+[sub_resource type="LabelSettings" id="LabelSettings_r5ivb"]
+font_size = 100
+font_color = Color(0, 1, 0.980392, 1)
+outline_size = 22
+outline_color = Color(0, 0.380392, 1, 1)
+
+[node name="Player" type="Node3D"]
+
+[node name="Player" type="CharacterBody3D" parent="."]
+collision_layer = 0
+floor_snap_length = 0.0
+script = ExtResource("3_t3t17")
 jump_states = {
-"Air_Jump": ExtResource("2_ea3t7"),
-"Ground_Jump": ExtResource("3_r7dhq")
+"air_jump": ExtResource("4_ofenl"),
+"ground_jump": ExtResource("5_heeh6")
 }
 stances = {
-"Crouch": NodePath("Stances/Crouch"),
-"Prone": NodePath("Stances/Prone"),
-"Stealth": NodePath("Stances/Stealth"),
-"Upright": NodePath("Stances/Upright")
+"crouch": NodePath("Stances/crouch"),
+"prone": NodePath("Stances/prone"),
+"stealth": NodePath("Stances/stealth"),
+"upright": NodePath("Stances/upright")
 }
 
-[node name="MovementController" type="Node" parent="." node_paths=PackedStringArray("player", "mesh_root")]
-script = ExtResource("2_8kdjr")
+[node name="ActiveSkillController" type="Node" parent="Player" node_paths=PackedStringArray("player", "anim_tree", "skills_container", "movement_controller", "camera_controller")]
+script = ExtResource("6_v68le")
+player = NodePath("..")
+anim_tree = NodePath("../MeshRoot/xbot/AnimationTree")
+skills_container = NodePath("../MeshRoot/xbot/Armature/Skeleton3D/sword/SkillsContainer")
+movement_controller = NodePath("../MovementController")
+camera_controller = NodePath("../CamRoot")
+
+[node name="MovementController" type="Node" parent="Player" node_paths=PackedStringArray("player", "mesh_root")]
+script = ExtResource("7_dei83")
 player = NodePath("..")
 mesh_root = NodePath("../MeshRoot")
 
-[node name="AnimationController" type="Node" parent="." node_paths=PackedStringArray("animation_tree", "player")]
-script = ExtResource("7_eaxq0")
-animation_tree = NodePath("../MeshRoot/AnimationTree")
+[node name="AnimationController" type="Node" parent="Player" node_paths=PackedStringArray("animation_tree", "player")]
+script = ExtResource("8_08hrk")
+animation_tree = NodePath("../MeshRoot/xbot/AnimationTree")
 player = NodePath("..")
 
-[node name="Stances" type="Node" parent="."]
+[node name="Stances" type="Node" parent="Player"]
 
-[node name="Upright" type="Node" parent="Stances" node_paths=PackedStringArray("collider", "col_raycast")]
-script = ExtResource("10_ky5k8")
-idle_state = ExtResource("2_rmqlc")
-walk_state = ExtResource("3_cs84h")
-run_state = ExtResource("4_u1mok")
-sprint_state = ExtResource("5_u21jl")
+[node name="upright" type="Node" parent="Player/Stances" node_paths=PackedStringArray("collider", "col_raycast")]
+script = ExtResource("9_1mhpp")
+idle_state = ExtResource("10_tbgld")
+walk_state = ExtResource("11_c8igh")
+run_state = ExtResource("12_mdy0q")
+sprint_state = ExtResource("13_hcr22")
 collider = NodePath("../../UprightCollision")
-col_raycast = NodePath("../../UprightCollision/UprightRaycast")
+col_raycast = NodePath("../../UprightCollision/RayCast3D")
 
-[node name="Stealth" type="Node" parent="Stances" node_paths=PackedStringArray("collider", "col_raycast")]
-script = ExtResource("10_ky5k8")
-idle_state = ExtResource("11_gjebj")
-walk_state = ExtResource("12_dh40f")
-run_state = ExtResource("12_dh40f")
-sprint_state = ExtResource("12_dh40f")
+[node name="stealth" type="Node" parent="Player/Stances" node_paths=PackedStringArray("collider", "col_raycast")]
+script = ExtResource("9_1mhpp")
+idle_state = ExtResource("14_cydkq")
+walk_state = ExtResource("15_1gth8")
+run_state = ExtResource("15_1gth8")
+sprint_state = ExtResource("15_1gth8")
 collider = NodePath("../../UprightCollision")
-col_raycast = NodePath("../../UprightCollision/UprightRaycast")
+col_raycast = NodePath("../../UprightCollision/RayCast3D")
 
-[node name="Crouch" type="Node" parent="Stances" node_paths=PackedStringArray("collider", "col_raycast")]
-script = ExtResource("10_ky5k8")
-idle_state = ExtResource("13_3cgbw")
-walk_state = ExtResource("14_fp7k8")
-run_state = ExtResource("14_fp7k8")
-sprint_state = ExtResource("15_wtyel")
+[node name="crouch" type="Node" parent="Player/Stances" node_paths=PackedStringArray("collider", "col_raycast", "higher_stances")]
+script = ExtResource("9_1mhpp")
+idle_state = ExtResource("16_um7s7")
+walk_state = ExtResource("17_hw7cs")
+run_state = ExtResource("17_hw7cs")
+sprint_state = ExtResource("18_wgs3g")
+camera_height = 0.85
 collider = NodePath("../../CrouchCollision")
-col_raycast = NodePath("../../CrouchCollision/CrouchRaycast")
+col_raycast = NodePath("../../CrouchCollision/RayCast3D")
+higher_stances = [NodePath("../upright"), NodePath("../stealth")]
 
-[node name="Prone" type="Node" parent="Stances" node_paths=PackedStringArray("collider", "col_raycast")]
-script = ExtResource("10_ky5k8")
-idle_state = ExtResource("16_sk2wh")
-walk_state = ExtResource("17_q2twh")
-run_state = ExtResource("17_q2twh")
-sprint_state = ExtResource("18_7smco")
+[node name="prone" type="Node" parent="Player/Stances" node_paths=PackedStringArray("collider", "higher_stances")]
+script = ExtResource("9_1mhpp")
+idle_state = ExtResource("19_ei2h6")
+walk_state = ExtResource("20_evda4")
+run_state = ExtResource("20_evda4")
+sprint_state = ExtResource("21_gccp6")
+camera_height = 0.7
 collider = NodePath("../../ProneCollision")
-col_raycast = NodePath("../../ProneCollision/ProneRaycast")
+higher_stances = [NodePath("../crouch"), NodePath("../stealth"), NodePath("../upright")]
 
-[node name="UprightCollision" type="CollisionShape3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
-shape = SubResource("CapsuleShape3D_agq8m")
+[node name="MeshRoot" type="Node3D" parent="Player"]
 
-[node name="UprightRaycast" type="RayCast3D" parent="UprightCollision"]
+[node name="xbot" parent="Player/MeshRoot" instance=ExtResource("20_n3wry")]
 
-[node name="CrouchCollision" type="CollisionShape3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.640644, 0)
-shape = SubResource("CapsuleShape3D_sreo7")
-
-[node name="CrouchRaycast" type="RayCast3D" parent="CrouchCollision"]
-
-[node name="ProneCollision" type="CollisionShape3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0.393707, -0.0924664)
-shape = SubResource("CapsuleShape3D_l78aw")
-
-[node name="ProneRaycast" type="RayCast3D" parent="ProneCollision"]
-
-[node name="MeshRoot" type="Node3D" parent="."]
-
-[node name="xbot" parent="MeshRoot" instance=ExtResource("1_4v3m0")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0769385, 0, 0)
-
-[node name="Skeleton3D" parent="MeshRoot/xbot/Armature" index="0"]
-bones/0/position = Vector3(-0.0791322, 1.0099, -0.0641015)
-bones/1/rotation = Quaternion(0.0163389, 2.6593e-07, 2.83162e-07, 0.999867)
-bones/2/rotation = Quaternion(-0.0367113, -5.00542e-13, -2.18804e-09, 0.999326)
-bones/3/rotation = Quaternion(0.070354, 3.50055e-08, 3.16362e-08, 0.997522)
-bones/5/rotation = Quaternion(-0.110538, -4.50395e-10, -4.01677e-09, 0.993872)
-bones/7/rotation = Quaternion(-0.475939, 0.559893, -0.537929, -0.413079)
-bones/8/rotation = Quaternion(0.549061, 0.111862, 0.0147187, 0.828132)
-bones/9/rotation = Quaternion(0.237626, 0.366428, -0.142063, 0.888303)
-bones/10/rotation = Quaternion(-0.0769055, -0.634356, -0.0266382, 0.768745)
-bones/11/rotation = Quaternion(0.278238, 0.0127605, -0.374179, 0.88454)
-bones/12/rotation = Quaternion(0.149582, 0.0870632, 0.0235477, 0.984627)
+[node name="Skeleton3D" parent="Player/MeshRoot/xbot/Armature" index="0"]
+bones/0/position = Vector3(-0.079132, 0.967315, -0.0493594)
+bones/1/rotation = Quaternion(0.0939731, 2.99239e-07, 2.55098e-07, 0.995575)
+bones/2/rotation = Quaternion(-0.113718, -2.98169e-09, -5.36626e-09, 0.993513)
+bones/3/rotation = Quaternion(0.0698427, 3.50052e-08, 3.16357e-08, 0.997558)
+bones/5/rotation = Quaternion(-0.0843618, 7.9378e-09, -1.06643e-08, 0.996435)
+bones/7/rotation = Quaternion(-0.506472, 0.599834, -0.492998, -0.375018)
+bones/8/rotation = Quaternion(0.40328, 0.160733, 0.273649, 0.858281)
+bones/9/rotation = Quaternion(0.215732, 0.359154, -0.113523, 0.900878)
+bones/10/rotation = Quaternion(-0.0769056, -0.634356, -0.0266382, 0.768745)
+bones/11/rotation = Quaternion(0.278238, 0.012761, -0.374179, 0.88454)
+bones/12/rotation = Quaternion(0.149582, 0.0870631, 0.0235482, 0.984627)
 bones/13/rotation = Quaternion(-0.00166555, -0.000807376, 0.00691943, 0.999974)
-bones/15/rotation = Quaternion(0.142939, -0.0121914, -0.0751481, 0.986799)
-bones/16/rotation = Quaternion(0.160254, 0.0332686, -0.00787042, 0.986484)
-bones/17/rotation = Quaternion(0.0784295, 0.0160446, 0.00732336, 0.996764)
-bones/19/rotation = Quaternion(0.17801, 0.00590024, -0.0619602, 0.982058)
-bones/20/rotation = Quaternion(0.270391, 0.0217107, 0.0338897, 0.961909)
-bones/21/rotation = Quaternion(0.291392, 0.0427738, 0.0423182, 0.95471)
-bones/23/rotation = Quaternion(0.207551, 0.0161469, -0.0218268, 0.977847)
-bones/24/rotation = Quaternion(0.288547, -0.0184391, 0.0383206, 0.956521)
-bones/25/rotation = Quaternion(0.302591, 0.0601605, -0.068, 0.948786)
-bones/27/rotation = Quaternion(0.197709, 0.0616549, 0.072087, 0.97566)
-bones/28/rotation = Quaternion(0.346411, 0.110829, 0.0706117, 0.928833)
-bones/29/rotation = Quaternion(0.377147, 0.120625, 0.046155, 0.917104)
-bones/31/rotation = Quaternion(0.475932, 0.5599, -0.537927, 0.413081)
-bones/32/rotation = Quaternion(0.524444, 0.157442, 0.0891409, 0.832)
-bones/33/rotation = Quaternion(0.158253, -0.393985, 0.261521, 0.866798)
-bones/34/rotation = Quaternion(-0.072001, 0.450399, 0.0360381, 0.88919)
-bones/35/rotation = Quaternion(0.279055, -0.110161, 0.364719, 0.881461)
-bones/36/rotation = Quaternion(0.149879, -0.0870923, -0.0225225, 0.984604)
+bones/15/rotation = Quaternion(0.240343, -0.0111318, -0.114796, 0.963812)
+bones/16/rotation = Quaternion(0.439614, 0.00845783, -0.118515, 0.890293)
+bones/17/rotation = Quaternion(0.0706966, 0.131131, 0.00494568, 0.988829)
+bones/19/rotation = Quaternion(0.435451, 0.021636, -0.122499, 0.891576)
+bones/20/rotation = Quaternion(0.326407, 0.0381867, -0.0122682, 0.944378)
+bones/21/rotation = Quaternion(0.375395, 0.0202683, -0.0653905, 0.924333)
+bones/23/rotation = Quaternion(0.456162, 0.0490839, -0.0801305, 0.884921)
+bones/24/rotation = Quaternion(0.291861, -0.0442209, -0.0461699, 0.954322)
+bones/25/rotation = Quaternion(0.371741, 0.0642534, -0.127395, 0.917306)
+bones/27/rotation = Quaternion(0.52661, 0.137307, -0.0278074, 0.838484)
+bones/28/rotation = Quaternion(0.317898, 0.110421, 0.0684516, 0.939182)
+bones/29/rotation = Quaternion(0.0868886, -0.105282, 0.0039431, 0.990631)
+bones/31/rotation = Quaternion(0.506464, 0.59984, -0.492997, 0.375021)
+bones/32/rotation = Quaternion(0.521235, 0.0396299, 0.166701, 0.836035)
+bones/33/rotation = Quaternion(0.122199, -0.604378, 0.244302, 0.748406)
+bones/34/rotation = Quaternion(0.0113271, 0.669133, 0.0233237, 0.74269)
+bones/35/rotation = Quaternion(0.279056, -0.11016, 0.364718, 0.881461)
+bones/36/rotation = Quaternion(0.149878, -0.0870925, -0.0225216, 0.984604)
 bones/37/rotation = Quaternion(-0.0015307, 0.000745011, -0.006074, 0.99998)
-bones/39/rotation = Quaternion(0.142938, 0.0122211, 0.0749431, 0.986815)
-bones/40/rotation = Quaternion(0.160262, -0.033259, 0.00822663, 0.98648)
-bones/41/rotation = Quaternion(0.0784186, -0.0160578, -0.0074761, 0.996763)
-bones/43/rotation = Quaternion(0.178013, -0.00580467, 0.0614365, 0.982091)
-bones/44/rotation = Quaternion(0.270401, -0.0216578, -0.0330515, 0.961937)
-bones/45/rotation = Quaternion(0.291369, -0.0428842, -0.0426062, 0.954699)
-bones/47/rotation = Quaternion(0.207548, -0.0161806, 0.0219855, 0.977844)
-bones/48/rotation = Quaternion(0.288556, 0.0184075, -0.0385328, 0.95651)
-bones/49/rotation = Quaternion(0.302599, -0.0600877, 0.0678911, 0.948796)
-bones/51/rotation = Quaternion(0.19754, -0.0621607, -0.069585, 0.975844)
-bones/52/rotation = Quaternion(0.345765, -0.112825, -0.0700249, 0.928878)
-bones/53/rotation = Quaternion(0.376437, -0.122821, -0.0466733, 0.917078)
-bones/55/rotation = Quaternion(-0.179278, 0.0258372, 0.980207, 0.0799188)
-bones/56/rotation = Quaternion(-0.234193, -0.146158, -0.039182, 0.960342)
-bones/57/rotation = Quaternion(0.619359, -0.00256259, 0.0993681, 0.77879)
-bones/60/rotation = Quaternion(0.124281, 0.218783, 0.964452, -0.0807545)
-bones/61/rotation = Quaternion(-0.167003, 0.00722768, -0.00204565, 0.985928)
-bones/62/rotation = Quaternion(0.376258, 0.0809009, -0.0945144, 0.918124)
+bones/39/rotation = Quaternion(0.142937, 0.0122212, 0.0749431, 0.986815)
+bones/40/rotation = Quaternion(0.160264, -0.0332609, 0.00822683, 0.986479)
+bones/41/rotation = Quaternion(0.0784161, -0.0160557, -0.00747703, 0.996763)
+bones/43/rotation = Quaternion(0.178013, -0.00580456, 0.0614368, 0.982091)
+bones/44/rotation = Quaternion(0.270403, -0.0216599, -0.0330518, 0.961936)
+bones/45/rotation = Quaternion(0.291367, -0.0428827, -0.0426066, 0.954699)
+bones/47/rotation = Quaternion(0.207547, -0.0161806, 0.0219854, 0.977844)
+bones/48/rotation = Quaternion(0.288557, 0.0184074, -0.0385319, 0.95651)
+bones/49/rotation = Quaternion(0.302598, -0.0600878, 0.0678907, 0.948796)
+bones/51/rotation = Quaternion(0.197542, -0.0621623, -0.0695851, 0.975844)
+bones/52/rotation = Quaternion(0.345763, -0.112823, -0.0700256, 0.928879)
+bones/53/rotation = Quaternion(0.376437, -0.122821, -0.046673, 0.917078)
+bones/55/rotation = Quaternion(-0.176251, -0.0323677, 0.97255, 0.148443)
+bones/56/rotation = Quaternion(-0.211596, -0.186104, -0.0285074, 0.959051)
+bones/57/rotation = Quaternion(0.642226, 0.0319703, 0.119639, 0.756446)
+bones/60/rotation = Quaternion(0.122718, 0.259734, 0.949535, -0.125943)
+bones/61/rotation = Quaternion(-0.170584, 0.0146603, -0.00272866, 0.98523)
+bones/62/rotation = Quaternion(0.335398, 0.0691898, -0.156893, 0.92634)
 
-[node name="Beta_Joints" parent="MeshRoot/xbot/Armature/Skeleton3D" index="0"]
-surface_material_override/0 = SubResource("StandardMaterial3D_ghhvt")
+[node name="sword" type="BoneAttachment3D" parent="Player/MeshRoot/xbot/Armature/Skeleton3D" index="2"]
+transform = Transform3D(-0.121753, -0.589861, 0.798273, -0.30044, -0.744626, -0.596043, 0.945998, -0.312404, -0.0865574, -0.475842, 0.968701, -0.316088)
+bone_name = "mixamorig_RightHand"
+bone_idx = 10
 
-[node name="Beta_Surface" parent="MeshRoot/xbot/Armature/Skeleton3D" index="1"]
-surface_material_override/0 = SubResource("StandardMaterial3D_inket")
+[node name="sword" parent="Player/MeshRoot/xbot/Armature/Skeleton3D/sword" instance=ExtResource("21_5grcu")]
+transform = Transform3D(-0.107729, -0.0617279, 0.790307, -0.0515635, 0.796427, 0.0551777, -0.791035, -0.0435085, -0.111227, 0.0962751, 0.0848084, 0.0259023)
 
-[node name="AnimationTree" type="AnimationTree" parent="MeshRoot"]
-root_node = NodePath("../xbot")
-tree_root = SubResource("AnimationNodeBlendTree_fn1gy")
-anim_player = NodePath("../xbot/AnimationPlayer")
-parameters/Crouch_movement_blend/blend_position = 0
-parameters/Prone_movement_blend/blend_position = 0.0
-parameters/Stealth_movement_blend/blend_position = 0.0
-parameters/Upright_movement_blend/blend_position = 0.0
+[node name="SkillsContainer" type="Node3D" parent="Player/MeshRoot/xbot/Armature/Skeleton3D/sword" node_paths=PackedStringArray("active_skills")]
+script = ExtResource("24_jddri")
+active_skills = [NodePath("ActiveSkill_1"), NodePath("ActiveSkill_2"), NodePath("ActiveSkill_3"), NodePath("ActiveSkill_4")]
+
+[node name="ActiveSkill_1" type="Node3D" parent="Player/MeshRoot/xbot/Armature/Skeleton3D/sword/SkillsContainer" node_paths=PackedStringArray("vfx")]
+script = ExtResource("25_yly44")
+animation_name = &"sword_slice_1"
+windup_duration = 0.1
+delivery_duration = 0.33
+recovery_duration = 0.1
+dash_duration = 0.15
+vfx_delay = 0.0
+vfx = NodePath("../GPUTrail3D")
+
+[node name="ActiveSkill_2" type="Node3D" parent="Player/MeshRoot/xbot/Armature/Skeleton3D/sword/SkillsContainer" node_paths=PackedStringArray("vfx")]
+script = ExtResource("25_yly44")
+animation_name = &"sword_slice_2"
+windup_duration = 0.1
+delivery_duration = 0.33
+recovery_duration = 0.1
+dash_duration = 0.15
+dash_velocity = Vector3(0, 0, 8)
+vfx_delay = 0.0
+vfx = NodePath("../GPUTrail3D")
+
+[node name="ActiveSkill_3" type="Node3D" parent="Player/MeshRoot/xbot/Armature/Skeleton3D/sword/SkillsContainer" node_paths=PackedStringArray("vfx")]
+script = ExtResource("25_yly44")
+animation_name = &"sword_slice_3"
+windup_duration = 0.12
+delivery_duration = 0.55
+recovery_duration = 0.14
+dash_delay = 0.12
+dash_velocity = Vector3(0, 0, 8)
+vfx_delay = 0.0
+vfx_duration = 0.5
+vfx = NodePath("../GPUTrail3D")
+
+[node name="ActiveSkill_4" type="Node3D" parent="Player/MeshRoot/xbot/Armature/Skeleton3D/sword/SkillsContainer" node_paths=PackedStringArray("vfx")]
+script = ExtResource("25_yly44")
+animation_name = &"sword_slice_4"
+windup_duration = 0.15
+delivery_duration = 0.73
+recovery_duration = 0.16
+dash_delay = 0.15
+dash_duration = 0.25
+dash_velocity = Vector3(0, 0, 15)
+vfx_delay = 0.2
+vfx_duration = 0.7
+vfx = NodePath("../GPUTrail3D")
+
+[node name="GPUTrail3D" type="GPUParticles3D" parent="Player/MeshRoot/xbot/Armature/Skeleton3D/sword/SkillsContainer"]
+transform = Transform3D(0.999994, -0.00281477, -0.00208196, 0.00281519, 0.999996, 0.000428127, 0.00208066, -0.000433793, 0.999998, 0.779095, 0.258681, -0.0545248)
+visible = false
+amount = 25
+sub_emitter = NodePath(".")
+lifetime = 25.0
+explosiveness = 1.0
+fixed_fps = 0
+visibility_aabb = AABB(-0.281823, -0.604823, -0.175972, 0.563646, 1.20965, 0.351944)
+process_material = SubResource("ShaderMaterial_5xlvj")
+draw_pass_1 = SubResource("QuadMesh_cuvhi")
+script = ExtResource("31_4n53q")
+length = 25
+color_ramp = ExtResource("28_kqquw")
+curve = ExtResource("29_ri4k2")
+_defaults_have_been_set = true
+
+[node name="AnimationTree" type="AnimationTree" parent="Player/MeshRoot/xbot"]
+tree_root = SubResource("AnimationNodeBlendTree_wcl6t")
+anim_player = NodePath("../AnimationPlayer")
 parameters/air_jump/active = false
 parameters/air_jump/internal_active = false
 parameters/air_jump/request = 0
-parameters/jump/active = false
-parameters/jump/internal_active = false
-parameters/jump/request = 0
+parameters/attack_buffer_0/TimeScale/scale = 1.0
+parameters/attack_buffer_1/TimeScale/scale = 1.0
+parameters/attack_transition/current_state = "end_attack"
+parameters/attack_transition/transition_request = ""
+parameters/attack_transition/current_index = 0
+parameters/crouch_movement_blend/blend_position = 0.0
+parameters/ground_jump/active = false
+parameters/ground_jump/internal_active = false
+parameters/ground_jump/request = 0
 parameters/movement_anim_speed/scale = 1.0
 parameters/on_floor_blend/blend_amount = 1.0
+parameters/prone_movement_blend/blend_position = 0.0
 parameters/stance_transition/current_state = "upright"
 parameters/stance_transition/transition_request = ""
 parameters/stance_transition/current_index = 0
+parameters/stealth_movement_blend/blend_position = 0.0
+parameters/upright_movement_blend/blend_position = 0.0
 
-[node name="CamRoot" type="Node3D" parent="." node_paths=PackedStringArray("player")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.56055, 0)
-script = ExtResource("2_ylwrj")
+[node name="CamRoot" type="Node3D" parent="Player" node_paths=PackedStringArray("player")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.3, 0)
+script = ExtResource("32_c4to6")
 player = NodePath("..")
 
-[node name="CamYaw" type="Node3D" parent="CamRoot"]
+[node name="CamYaw" type="Node3D" parent="Player/CamRoot"]
 
-[node name="CamPitch" type="Node3D" parent="CamRoot/CamYaw"]
+[node name="CamPitch" type="Node3D" parent="Player/CamRoot/CamYaw"]
+transform = Transform3D(1, 0, 2.98023e-08, 0, 0.949655, -0.313296, 0, 0.313296, 0.949655, 0, 0, 0)
 
-[node name="SpringArm3D" type="SpringArm3D" parent="CamRoot/CamYaw/CamPitch"]
-transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0)
-shape = SubResource("SphereShape3D_02agn")
+[node name="SpringArm3D" type="SpringArm3D" parent="Player/CamRoot/CamYaw/CamPitch"]
+transform = Transform3D(-1, 0, -8.74229e-08, -1.77636e-15, 1, 0, 8.74229e-08, 0, -1, 0, 0, 0)
+shape = SubResource("SphereShape3D_ykg3r")
 spring_length = 3.0
 
-[node name="Camera3D" type="Camera3D" parent="CamRoot/CamYaw/CamPitch/SpringArm3D"]
+[node name="Camera3D" type="Camera3D" parent="Player/CamRoot/CamYaw/CamPitch/SpringArm3D"]
+transform = Transform3D(1, 1.77636e-15, -9.9476e-14, 0, 1, 0, 0, 0, 1, 0, 0, 2.5)
+current = true
 
-[connection signal="changed_movement_direction" from="." to="MovementController" method="_on_set_movement_direction"]
-[connection signal="changed_movement_state" from="." to="MovementController" method="_on_set_movement_state"]
-[connection signal="changed_movement_state" from="." to="AnimationController" method="_on_set_movement_state"]
-[connection signal="changed_movement_state" from="." to="CamRoot" method="_on_set_movement_state"]
-[connection signal="changed_stance" from="." to="AnimationController" method="_on_set_stance"]
-[connection signal="changed_stance" from="." to="CamRoot" method="_on_set_stance"]
-[connection signal="pressed_jump" from="." to="MovementController" method="_jump"]
-[connection signal="pressed_jump" from="." to="AnimationController" method="_jump"]
+[node name="UprightCollision" type="CollisionShape3D" parent="Player"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.75, 0)
+shape = SubResource("CapsuleShape3D_eyiaf")
 
-[editable path="MeshRoot/xbot"]
+[node name="RayCast3D" type="RayCast3D" parent="Player/UprightCollision"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.27, 0)
+target_position = Vector3(0, 1.02, 0)
+
+[node name="CrouchCollision" type="CollisionShape3D" parent="Player"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.47, 0)
+shape = SubResource("CapsuleShape3D_47wx7")
+disabled = true
+
+[node name="RayCast3D" type="RayCast3D" parent="Player/CrouchCollision"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.00986838, 0)
+target_position = Vector3(0, 0.46, 0)
+
+[node name="ProneCollision" type="CollisionShape3D" parent="Player"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.24, 0)
+shape = SubResource("CylinderShape3D_vebkc")
+disabled = true
+
+[node name="Label" type="Label" parent="Player"]
+visible = false
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -346.0
+offset_top = -525.0
+offset_right = 346.0
+offset_bottom = -360.0
+grow_horizontal = 2
+grow_vertical = 2
+label_settings = SubResource("LabelSettings_r5ivb")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="changed_movement_direction" from="Player" to="Player/MovementController" method="_on_set_movement_direction"]
+[connection signal="changed_movement_state" from="Player" to="Player/ActiveSkillController" method="_on_changed_movement_state"]
+[connection signal="changed_movement_state" from="Player" to="Player/MovementController" method="_on_set_movement_state"]
+[connection signal="changed_movement_state" from="Player" to="Player/AnimationController" method="_on_set_movement_state"]
+[connection signal="changed_movement_state" from="Player" to="Player/CamRoot" method="_on_set_movement_state"]
+[connection signal="changed_stance" from="Player" to="Player/AnimationController" method="_on_set_stance"]
+[connection signal="changed_stance" from="Player" to="Player/CamRoot" method="_on_set_stance"]
+[connection signal="pressed_jump" from="Player" to="Player/MovementController" method="_jump"]
+[connection signal="pressed_jump" from="Player" to="Player/AnimationController" method="_jump"]
+[connection signal="pressed_primary_fire" from="Player" to="Player/ActiveSkillController" method="_on_pressed_primary_fire"]
+[connection signal="set_cam_rotation" from="Player/CamRoot" to="Player/MovementController" method="_on_set_cam_rotation"]
+
+[editable path="Player/MeshRoot/xbot"]

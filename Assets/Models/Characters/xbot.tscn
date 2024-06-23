@@ -1,12 +1,21 @@
-[gd_scene load_steps=2 format=3 uid="uid://g0xmhymgrsbe"]
+[gd_scene load_steps=4 format=3 uid="uid://g0xmhymgrsbe"]
 
 [ext_resource type="PackedScene" uid="uid://chw3wthrfwdxk" path="res://Assets/Models/Characters/xbot.glb" id="1_i2x7n"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0bmnr"]
+albedo_color = Color(0.618529, 0.443247, 0.214386, 1)
+metallic = 1.0
+roughness = 0.55
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_bpes8"]
+albedo_color = Color(0.113789, 0.176418, 0.258102, 1)
+metallic = 1.0
+roughness = 0.4
 
 [node name="xbot" instance=ExtResource("1_i2x7n")]
 
 [node name="Skeleton3D" parent="Armature" index="0"]
 bones/0/position = Vector3(-0.0791318, 1.02863, -0.0493593)
-bones/0/scale = Vector3(1, 1, 1)
 bones/4/rotation = Quaternion(-1.49012e-08, -5.89945e-14, -1.11531e-15, 1)
 bones/7/rotation = Quaternion(-0.484431, 0.570964, -0.526164, -0.403087)
 bones/7/scale = Vector3(1, 1, 1)
@@ -44,11 +53,16 @@ bones/54/scale = Vector3(1, 1, 1)
 bones/55/rotation = Quaternion(-7.54939e-08, 0.0103565, 0.999946, -7.81892e-10)
 bones/55/scale = Vector3(1, 1, 1)
 bones/56/rotation = Quaternion(-0.0380914, -1.13578e-07, -1.24274e-09, 0.999274)
-bones/57/scale = Vector3(1, 1, 1)
 bones/60/rotation = Quaternion(-7.54939e-08, 0.010368, 0.999946, -7.82759e-10)
 bones/60/scale = Vector3(1, 1, 1)
 bones/61/rotation = Quaternion(-0.0381124, -1.65365e-07, 7.31709e-10, 0.999273)
 bones/63/rotation = Quaternion(0.335241, -9.6877e-08, 2.40992e-07, 0.942132)
+
+[node name="Beta_Joints" parent="Armature/Skeleton3D" index="0"]
+surface_material_override/0 = SubResource("StandardMaterial3D_0bmnr")
+
+[node name="Beta_Surface" parent="Armature/Skeleton3D" index="1"]
+surface_material_override/0 = SubResource("StandardMaterial3D_bpes8")
 
 [node name="AnimationPlayer" parent="." index="1"]
 autoplay = "T"

@@ -1,11 +1,11 @@
-[gd_resource type="Resource" script_class="MovementState" load_steps=2 format=3 uid="uid://btdy8cre5545f"]
+[gd_resource type="Resource" script_class="MovementState" load_steps=2 format=3 uid="uid://bst4ytials11d"]
 
-[ext_resource type="Script" path="res://Player/PlayerScripts/movement_state.gd" id="1_llvmt"]
+[ext_resource type="Script" path="res://Player/PlayerScripts/movement_state.gd" id="1_aqmb7"]
 
 [resource]
-script = ExtResource("1_llvmt")
-id = 2
+script = ExtResource("1_aqmb7")
+state_name = "run"
 movement_speed = 8.0
 acceleration = 5.0
 camera_fov = 75.0
-animation_speed = 1.0
+id = 2

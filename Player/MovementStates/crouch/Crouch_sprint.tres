@@ -1,11 +1,11 @@
-[gd_resource type="Resource" script_class="MovementState" load_steps=2 format=3 uid="uid://cxlerdolyf67o"]
+[gd_resource type="Resource" script_class="MovementState" load_steps=2 format=3 uid="uid://b6d3nd27lewdo"]
 
-[ext_resource type="Script" path="res://Player/PlayerScripts/movement_state.gd" id="1_mi1q0"]
+[ext_resource type="Script" path="res://Player/PlayerScripts/movement_state.gd" id="1_6tkq0"]
 
 [resource]
-script = ExtResource("1_mi1q0")
-id = 0
-movement_speed = 0.0
-acceleration = 6.0
-camera_fov = 75.0
-animation_speed = 1.0
+script = ExtResource("1_6tkq0")
+id = 1
+movement_speed = 2.25
+acceleration = 7.0
+camera_fov = 70.0
+animation_speed = 2.0

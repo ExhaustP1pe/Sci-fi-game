@@ -1,9 +1,10 @@
-[gd_resource type="Resource" script_class="MovementState" load_steps=2 format=3 uid="uid://crg1qik8u4maj"]
+[gd_resource type="Resource" script_class="MovementState" load_steps=2 format=3 uid="uid://dfjf8bepg1ura"]
 
-[ext_resource type="Script" path="res://Player/PlayerScripts/movement_state.gd" id="1_f1atn"]
+[ext_resource type="Script" path="res://Player/PlayerScripts/movement_state.gd" id="1_ro7xo"]
 
 [resource]
-script = ExtResource("1_f1atn")
+script = ExtResource("1_ro7xo")
+state_name = "walk"
 id = 1
 movement_speed = 3.0
 acceleration = 7.0

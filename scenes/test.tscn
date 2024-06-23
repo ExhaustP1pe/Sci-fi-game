@@ -15,7 +15,7 @@
 [ext_resource type="Texture2D" uid="uid://bdt4o1woid1qg" path="res://Assets/Textures/kenney_prototype_tools/textures/orange/texture_11.png" id="15_a8jrn"]
 [ext_resource type="Material" uid="uid://cwge2uwnelxa0" path="res://Assets/Models/Nature Pack/PineTree_3.tres" id="15_soudf"]
 [ext_resource type="Material" uid="uid://fql54anjpi5b" path="res://Assets/Models/Nature Pack/PineTreeLeaves.tres" id="16_8xkar"]
-[ext_resource type="PackedScene" uid="uid://0oynp0xnkbh6" path="res://Player/player.tscn" id="16_tnohq"]
+[ext_resource type="PackedScene" uid="uid://cjxioru16jia3" path="res://Player/Player.tscn" id="16_k46u2"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_vopxw"]
 sky_top_color = Color(0.388235, 0.509804, 0.701961, 1)
@@ -218,6 +218,7 @@ environment = SubResource("Environment_ewug7")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(-0.866025, -0.433013, 0.25, 0, 0.5, 0.866025, -0.5, 0.75, -0.433013, 0, 13.1132, 0)
+visible = false
 shadow_enabled = true
 
 [node name="Constance-Scythe" parent="." instance=ExtResource("15_1b77d")]
@@ -251,7 +252,7 @@ mesh = SubResource("PrismMesh_hphak")
 material = ExtResource("3_4oo0p")
 
 [node name="AnimatableBody3D" type="AnimatableBody3D" parent="map"]
-transform = Transform3D(-0.866025, 2.98023e-08, -0.5, -0.433013, 0.5, 0.75, 0.25, 0.866026, -0.433012, -19.6264, -8.0821, -2.40541)
+transform = Transform3D(-0.866025, 2.98023e-08, -0.5, -0.433013, 0.5, 0.75, 0.25, 0.866026, -0.433012, -19.5921, -8.13351, -2.37573)
 disable_mode = 2
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="map/AnimatableBody3D"]
@@ -288,7 +289,6 @@ stringer_material = ExtResource("8_j7h7n")
 riser_material = ExtResource("9_sfgt7")
 thread_material = ExtResource("10_ejp5m")
 make_simple_collision = true
-metadata/_edit_group_ = true
 
 [node name="PineTree_3" type="MeshInstance3D" parent="map"]
 transform = Transform3D(-0.866025, 1.49012e-08, -0.5, -0.433013, 0.5, 0.75, 0.25, 0.866026, -0.433013, -16.0707, -9.49206, -1.29122)
@@ -318,13 +318,31 @@ height = 0.0990593
 smooth_faces = false
 material = ExtResource("10_ejp5m")
 
+[node name="CSGCylinder3D3" type="CSGCylinder3D" parent="map"]
+transform = Transform3D(-0.866026, -2.49184e-07, -0.5, -0.433013, 0.5, 0.75, 0.25, 0.866026, -0.433013, -8.6849, 2.18484, -15.4241)
+use_collision = true
+radius = 1.84109
+height = 0.0990593
+smooth_faces = false
+material = ExtResource("10_ejp5m")
+
+[node name="CSGCylinder3D4" type="CSGCylinder3D" parent="map"]
+transform = Transform3D(-1.8081e-07, 0.866026, -0.5, 0.5, 0.433013, 0.75, 0.866026, -0.25, -0.433013, -7.485, 2.78479, -15.7705)
+use_collision = true
+radius = 1.89839
+height = 0.0990593
+smooth_faces = false
+material = ExtResource("10_ejp5m")
+
 [node name="CSGBox3D4" type="CSGBox3D" parent="map"]
 transform = Transform3D(-0.866026, -2.5332e-07, -0.5, -0.433013, 0.5, 0.75, 0.25, 0.866026, -0.433013, -15.1451, -8.03041, -5.00372)
+use_collision = true
 size = Vector3(0.974304, 5.0567, 0.144531)
 material = SubResource("StandardMaterial3D_5xwoc")
 
 [node name="CSGBox3D5" type="CSGBox3D" parent="map"]
 transform = Transform3D(-0.866026, -2.5332e-07, -0.5, -0.433013, 0.5, 0.75, 0.25, 0.866026, -0.433013, -17.7899, -9.93426, -5.36048)
+use_collision = true
 size = Vector3(1.82895, 2.56644, 0.144531)
 material = ExtResource("6_wj3i4")
 
@@ -333,5 +351,5 @@ transform = Transform3D(-3.67195, -1.07408e-06, -2.12, -1.83597, 2.12, 3.18, 1.0
 use_collision = true
 material = ExtResource("9_sfgt7")
 
-[node name="Player" parent="." instance=ExtResource("16_tnohq")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.68399, -0.00245857, 0.45442)
+[node name="Player" parent="." instance=ExtResource("16_k46u2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.784403, -0.00245857, 0.966258)
