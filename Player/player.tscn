@@ -260,6 +260,7 @@ outline_color = Color(0, 0.380392, 1, 1)
 collision_layer = 0
 floor_snap_length = 0.0
 script = ExtResource("3_t3t17")
+max_air_jump = 2
 jump_states = {
 "air_jump": ExtResource("4_ofenl"),
 "ground_jump": ExtResource("5_heeh6")
@@ -335,14 +336,14 @@ higher_stances = [NodePath("../crouch"), NodePath("../stealth"), NodePath("../up
 [node name="xbot" parent="Player/MeshRoot" instance=ExtResource("20_n3wry")]
 
 [node name="Skeleton3D" parent="Player/MeshRoot/xbot/Armature" index="0"]
-bones/0/position = Vector3(-0.079132, 0.967315, -0.0493594)
-bones/1/rotation = Quaternion(0.0939731, 2.99239e-07, 2.55098e-07, 0.995575)
-bones/2/rotation = Quaternion(-0.113718, -2.98169e-09, -5.36626e-09, 0.993513)
-bones/3/rotation = Quaternion(0.0698427, 3.50052e-08, 3.16357e-08, 0.997558)
-bones/5/rotation = Quaternion(-0.0843618, 7.9378e-09, -1.06643e-08, 0.996435)
-bones/7/rotation = Quaternion(-0.506472, 0.599834, -0.492998, -0.375018)
-bones/8/rotation = Quaternion(0.40328, 0.160733, 0.273649, 0.858281)
-bones/9/rotation = Quaternion(0.215732, 0.359154, -0.113523, 0.900878)
+bones/0/position = Vector3(-0.079132, 0.965932, -0.0493594)
+bones/1/rotation = Quaternion(0.101184, 2.99198e-07, 2.5496e-07, 0.994868)
+bones/2/rotation = Quaternion(-0.116099, -2.98169e-09, -5.36626e-09, 0.993238)
+bones/3/rotation = Quaternion(0.0685987, 3.50044e-08, 3.16345e-08, 0.997644)
+bones/5/rotation = Quaternion(-0.0873891, 1.10315e-08, -1.15243e-08, 0.996174)
+bones/7/rotation = Quaternion(-0.507936, 0.601759, -0.490646, -0.373032)
+bones/8/rotation = Quaternion(0.39462, 0.146215, 0.281267, 0.86243)
+bones/9/rotation = Quaternion(0.240717, 0.369337, -0.122193, 0.889221)
 bones/10/rotation = Quaternion(-0.0769056, -0.634356, -0.0266382, 0.768745)
 bones/11/rotation = Quaternion(0.278238, 0.012761, -0.374179, 0.88454)
 bones/12/rotation = Quaternion(0.149582, 0.0870631, 0.0235482, 0.984627)
@@ -359,9 +360,9 @@ bones/25/rotation = Quaternion(0.371741, 0.0642534, -0.127395, 0.917306)
 bones/27/rotation = Quaternion(0.52661, 0.137307, -0.0278074, 0.838484)
 bones/28/rotation = Quaternion(0.317898, 0.110421, 0.0684516, 0.939182)
 bones/29/rotation = Quaternion(0.0868886, -0.105282, 0.0039431, 0.990631)
-bones/31/rotation = Quaternion(0.506464, 0.59984, -0.492997, 0.375021)
-bones/32/rotation = Quaternion(0.521235, 0.0396299, 0.166701, 0.836035)
-bones/33/rotation = Quaternion(0.122199, -0.604378, 0.244302, 0.748406)
+bones/31/rotation = Quaternion(0.507925, 0.60176, -0.490651, 0.37304)
+bones/32/rotation = Quaternion(0.531246, 0.0567223, 0.160888, 0.829865)
+bones/33/rotation = Quaternion(0.125261, -0.605684, 0.250949, 0.744635)
 bones/34/rotation = Quaternion(0.0113271, 0.669133, 0.0233237, 0.74269)
 bones/35/rotation = Quaternion(0.279056, -0.11016, 0.364718, 0.881461)
 bones/36/rotation = Quaternion(0.149878, -0.0870925, -0.0225216, 0.984604)
@@ -378,15 +379,15 @@ bones/49/rotation = Quaternion(0.302598, -0.0600878, 0.0678907, 0.948796)
 bones/51/rotation = Quaternion(0.197542, -0.0621623, -0.0695851, 0.975844)
 bones/52/rotation = Quaternion(0.345763, -0.112823, -0.0700256, 0.928879)
 bones/53/rotation = Quaternion(0.376437, -0.122821, -0.046673, 0.917078)
-bones/55/rotation = Quaternion(-0.176251, -0.0323677, 0.97255, 0.148443)
-bones/56/rotation = Quaternion(-0.211596, -0.186104, -0.0285074, 0.959051)
-bones/57/rotation = Quaternion(0.642226, 0.0319703, 0.119639, 0.756446)
-bones/60/rotation = Quaternion(0.122718, 0.259734, 0.949535, -0.125943)
-bones/61/rotation = Quaternion(-0.170584, 0.0146603, -0.00272866, 0.98523)
-bones/62/rotation = Quaternion(0.335398, 0.0691898, -0.156893, 0.92634)
+bones/55/rotation = Quaternion(-0.17642, -0.0312611, 0.972586, 0.148243)
+bones/56/rotation = Quaternion(-0.214762, -0.186854, -0.0293047, 0.958177)
+bones/57/rotation = Quaternion(0.645896, 0.0325847, 0.119444, 0.753319)
+bones/60/rotation = Quaternion(0.123298, 0.264109, 0.948328, -0.125376)
+bones/61/rotation = Quaternion(-0.178657, 0.0169879, -0.000959792, 0.983764)
+bones/62/rotation = Quaternion(0.339083, 0.068629, -0.157181, 0.92499)
 
 [node name="sword" type="BoneAttachment3D" parent="Player/MeshRoot/xbot/Armature/Skeleton3D" index="2"]
-transform = Transform3D(-0.121753, -0.589861, 0.798273, -0.30044, -0.744626, -0.596043, 0.945998, -0.312404, -0.0865574, -0.475842, 0.968701, -0.316088)
+transform = Transform3D(-0.121753, -0.589861, 0.798273, -0.292623, -0.747178, -0.596737, 0.948444, -0.306248, -0.0816355, -0.475842, 0.977113, -0.319571)
 bone_name = "mixamorig_RightHand"
 bone_idx = 10
 
